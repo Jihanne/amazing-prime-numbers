@@ -9,7 +9,7 @@ with open('primes.txt','r') as file:
     for line in file:
         for num in line.split():
            primes.append(num)
-'''
+
 #1
 j=0
 for i in range(1000000):
@@ -169,11 +169,10 @@ print('{:0d} {:20d} {:15d}'.format(9, 1, (ends[12])))
 print('{:0d} {:20d} {:15d}'.format(9, 3, (ends[13])))
 print('{:0d} {:20d} {:15d}'.format(9, 7, (ends[14])))
 print('{:0d} {:20d} {:15d}'.format(9, 9, (ends[15])))
-'''
+print()
 #Twin primes
 j = 0 
 for i in range(999999):
-    if int(2 + int(primes[i])) in primes:
+    if int(primes[i+1]) == int(primes[i]) + 2:
         j+=1
-        print(j)
-print('There are ' + j + ' twin primes.')        
+print('There are ' + str(j) + ' twin primes.')               
