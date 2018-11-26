@@ -3,9 +3,8 @@ worst case scenario euclid's algorithm achieved when two consecutive fibonacci n
 the table is a plot of all consecutive fibonacci numbers (up to the 300th), and iterations increase by 1 every time
 
 Problem 3:
-sieve algorithm is incredibly inefficient unless one sieve is produced and the list is searched for multiple inputs.
-producing the sieve alone.
-note that the worst case scenario for this approach is when the number is either composite (not in the list), or the last
+sieve algorithm is incredibly inefficient unless one sieve containing primes is produced and the list is searched for multiple inputs.
+note that the worst case scenario for this approach is when the number is either composite (not in the list), or is the last
 prime.
 
 trial division is surprisingly efficient for numbers for up to 5 digits
@@ -15,7 +14,9 @@ fermat appears to be the least efficient of the three numbers for up to 5 digits
 least steps in calculating. this most likely has to do with the enormity of the numbers produced (exponents). 
 note that the worst case scenario for this approach is when the number is prime and large.
 
-as such, the tested inputs are the largest primes with digits 1 through 5.
+as such, the tested inputs are the largest primes of digits 1 through 5.
+
+increasing the number of digits proves to overwhelm sieve and fermat.
 
 Problem 5:
 direct correlation between number and number of primes below said number (from graph)
