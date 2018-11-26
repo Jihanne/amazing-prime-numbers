@@ -6,35 +6,28 @@ Created on Sun Nov 25 01:27:23 2018
 """
 from matplotlib import pyplot as plt
 
-loops = 0
-i = 0
-primes = []
+x_list = []
 with open('primes.txt','r') as file:
     for line in file:
         for num in line.split():
-           primes.append(num)
+           x_list.append(num)
            
-xlist = []
 pi_xlist = []          
-for i in range(2, int(primes[len(primes) - 1]) + 2, 1000):
-    j = 0
-    m = 0
-    while j < len(primes) and m is not -1:
-        if i <= int(primes[j]):
-            m = -1
-        else:
-            j+=1
-    xlist.append(i)
-    pi_xlist.append(j)        
-    i+=1 
-    
+for i in range(0, len(x_list)):
+    pi_xlist.append(i)  
+
+fig, ax = plt.subplots( nrows=1, ncols=1 )
+ax.plot(x_list, pi_xlist)
+ax.set_xlabel('x')
+ax.set_ylabel('π(x)')
+ax.set_title('List of primes below x')
+fig.savefig('pi_x_graph.png')   # save the figure to file
+plt.close(fig)    # close the figure        
+'''
 plt.title("List of primes below x")
 plt.xlabel("x")
 plt.ylabel("π(x)")
 
-plt.plot(xlist, pi_xlist)
-plt.scatter(xlist, pi_xlist)
-
-plt.show()
-    
+plt.plot(x_list, pi_xlist)
+'''
   
