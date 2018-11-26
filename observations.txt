@@ -10,7 +10,9 @@ prime. still, it takes incredibly little time to search the sieve for the prime 
 trial division is surprisingly efficient for numbers for up to 5 digits
 note that the worst case scenario for this approach is when the number is the largest prime (for the number of digits)
 
-fermat's efficiency depends largely on the random integer produced as this has the potential to produce a large integer to perform the modulo function. note that the worst case scenario for this approach is when the number is prime and large (and the generated random integer is also large)
+fermat's efficiency depends largely on the random integer produced as this has the potential to produce a large integer to perform the 
+modulo function. 
+note that the worst case scenario for this approach is when the number is prime and large (and the generated random integer is also large)
 
 as such, the tested inputs are the largest primes of digits 1 through 5.
 
