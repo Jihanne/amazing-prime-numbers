@@ -25,6 +25,7 @@ def fib(n):
 
 myList = fib(300)
 
+
 myTable = PrettyTable()
 myTable.field_names = ["x", "y", "iterations"]
 
@@ -34,13 +35,16 @@ for i in range (1, 300):
     #start = time.time()
     iterations = gcd_it(x, y)
     #end = time.time()
-    elapsed = end - start
+    #elapsed = end - start
     myTable.add_row([x, y, iterations])
-        
-print(myTable)
+    
+table_txt = myTable.get_string()
+with open('euclid_results.txt','w') as file:
+    file.write(table_txt)
 
 '''
 worst case scenario when finding gcd of 2 consec 
 fibonacci numbers
 note how the no. of iterations increases by 1 each time
         
+'''
