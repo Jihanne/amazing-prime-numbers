@@ -27,16 +27,16 @@ myList = fib(300)
 
 
 myTable = PrettyTable()
-myTable.field_names = ["x", "y", "iterations"]
+myTable.field_names = ["x", "y", "iterations", "time"]
 
 for i in range (1, 300):
     x = myList[i]
     y = myList[i + 1]
-    #start = time.time()
+    start = time.time()
     iterations = gcd_it(x, y)
-    #end = time.time()
-    #elapsed = end - start
-    myTable.add_row([x, y, iterations])
+    end = time.time()
+    elapsed = end - start
+    myTable.add_row([x, y, iterations, elapsed])
     
 table_txt = myTable.get_string()
 with open('euclid_results.txt','w') as file:
