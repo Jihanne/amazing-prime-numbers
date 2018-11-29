@@ -1,4 +1,5 @@
 Problem 1:
+memory error ram at 10 digits
 worst case scenario euclid's algorithm achieved when two consecutive fibonacci numbers are the inputs (x, y)
 the table is a plot of all consecutive fibonacci numbers (up to the 300th), and iterations increase by 1 every time
 
